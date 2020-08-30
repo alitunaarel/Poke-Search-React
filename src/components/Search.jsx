@@ -12,17 +12,13 @@ const Search = (props) => {
                     <Col sm={10} className="my-1">
                         <Form.Control
                             onChange={(e) => setSearch(e.target.value)}
-                            placeholder="search the pokemon" />
+                            placeholder="Search for Pokemon" />
                     </Col>
                     <Col sm={2} className="my-1">
-                        <Button block onClick={(e) => ''}>
-                            Search
-                        </Button>
+                        <Button block onClick={(e) => props.getPokemon(search)}>Search</Button>
                     </Col>
                 </Form.Row>
             </Form>
-
-
         </Container>
     )
 }
